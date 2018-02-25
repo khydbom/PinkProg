@@ -2,13 +2,24 @@
 <html>
 <head>
     <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-</head>
+
 <body>
-    <h1>Hello world</h1><button onclick="changeColor()">Click me</button>
-    <p>This is a paragraph.</p>
+
+    <h1>Hello world</h1>
+    <div id="main">
+        <button onClick="changeColor()">change color here</button>
+
+        <button onClick="startBomb()">Click me!</button>
+        <div id="clock"></div>
+        <div id="bomb"></div>
+
+    </div>
+
     <script src="Script.js"></script>
 </body>
 </html>
