@@ -1,18 +1,14 @@
 
 (function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
-          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
-          /* Optional GlideRecord */ event) {
+/* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+/* Optional GlideRecord */ event) {
 
-          // Add your code here
-	var baseUrl = gs.getProperty('glide.servlet.uri');
-	var page = "ticket"; 
+  // Add your code here
+var baseUrl = gs.getProperty('glide.servlet.uri');
+var page = "ticket";
 	var portal ="sp";
-	
+
 	template.print('<a style="color:#2375BB;font-weight:bold;" href="'+baseUrl+ portal+'?id='+page+'&table='+ current.sys_class_name + '&sys_id='+current.sys_id+'">'+"View ticket "+current.number+" in Service Portal"+'</a>');
-	
+
 
 })(current, template, email, email_action, event);
-
-
-
-
