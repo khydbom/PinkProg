@@ -1,7 +1,7 @@
 console.log("hey there")
 
 startTime();
-
+var backgroundcolor = 0
 
 function startTime() {
     var today= new Date()
@@ -25,9 +25,18 @@ function checkTime(number) {
 }
 
 function changeColor() {
-    console.log("I clicked");
-    $("body").css("background-color", "pink")
+   
+    if (backgroundcolor % 2 === 0) {
+        $("body").css("background-color", "black")
+    } else {
+        $("body").css("background-color", "pink")
+    }
+
+    backgroundcolor = backgroundcolor + 1
+
+  
 }
+
 
 function startBomb() {
     var bombSeconds = 10
